@@ -1,0 +1,69 @@
+opencc (0.1.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/libopencc1.symbols: updated. 
+
+ -- LI Daobing <lidaobing@debian.org>  Wed, 22 Sep 2010 20:40:54 +0800
+
+opencc (0.1.1-2) unstable; urgency=low
+
+  *debian/control: add Conflicts to libopencc0 (Closes: #596434)
+
+ -- Asias He <asias.hejun@gmail.com>  Sun, 12 Sep 2010 14:58:18 +0800
+
+opencc (0.1.1-1) unstable; urgency=low
+
+  [ Asias He ]
+  * New upstream release (closes: #591076).
+  * debian/control: bump standards version to 3.9.1.
+  * debian/watch: use googlecode.debian.net.
+
+  [ LI Daobing ]
+  * debian/clean: added. 
+
+ -- LI Daobing <lidaobing@debian.org>  Wed, 11 Aug 2010 22:04:12 +0800
+
+opencc (0.1.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - bump standards version to 3.9.1.
+    - libopencc0 -> libopecc1 (closes: #590473).
+    - libopencc1 replaces libopencc0.
+  * libopencc0 -> libopencc1:
+    - debian/libopencc0.install => debian/libopencc1.install
+    - debian/libopencc0.symbols => debian/libopencc1.symbols
+
+ -- LI Daobing <lidaobing@debian.org>  Thu, 29 Jul 2010 23:05:17 +0800
+
+opencc (0.0.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * debain/control: no longer build depends on python. 
+  * debian/opencc.install: move .mo files to libopencc0.
+  * debian/libopencc0.install: install .mo files.
+  * debian/opencc_dict.1: deleted.
+  * debian/opencc.manpages: deleted.
+
+ -- LI Daobing <lidaobing@debian.org>  Wed, 21 Jul 2010 22:42:32 +0800
+
+opencc (0.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: bump standards version to 3.9.0.
+
+ -- LI Daobing <lidaobing@debian.org>  Fri, 16 Jul 2010 23:52:08 +0800
+
+opencc (0.0.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/opencc.install: updated.
+  * debian/control: opencc depends on libopencc0 at the same version. 
+
+ -- LI Daobing <lidaobing@debian.org>  Tue, 22 Jun 2010 19:08:33 +0800
+
+opencc (0.0.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #585621)
+
+ -- LI Daobing <lidaobing@debian.org>  Sat, 19 Jun 2010 18:27:20 +0800
