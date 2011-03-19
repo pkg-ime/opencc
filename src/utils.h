@@ -1,7 +1,7 @@
 /*
 * Open Chinese Convert
 *
-* Copyright 2010 BYVoid <byvoid1@gmail.com>
+* Copyright 2010 BYVoid <byvoid.kcp@gmail.com>
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -38,29 +38,12 @@
 #	define LITTLE_ENDIAN (1)
 #endif
 
-#ifdef HAVE_CONFIG_H
-#	include "config.h"
-#endif
-
-#ifdef __WIN32
-#	include "config.win32.h"
-#endif
-
-#ifdef HAVE_GETTEXT
+#ifdef ENABLE_GETTEXT
 #	include <libintl.h>
 #	include <locale.h>
-#	define _(STRING) dgettext(PACKAGE,STRING)
+#	define _(STRING) dgettext(PACKAGE_NAME, STRING)
 #else
 #	define _(STRING) STRING
-#endif
-
-#ifdef __WIN32
-#	ifndef PKGDATADIR
-#		define PKGDATADIR ""
-#	endif
-#	ifndef VERSION
-#		define VERSION ""
-#	endif
 #endif
 
 #define debug_should_not_be_here() \

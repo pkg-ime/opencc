@@ -34,8 +34,8 @@ static int lib_initialized = FALSE;
 
 static void lib_initialize(void)
 {
-#ifdef HAVE_GETTEXT
-	bindtextdomain(PACKAGE, LOCALEDIR);
+#ifdef ENABLE_GETTEXT
+	bindtextdomain(PACKAGE_NAME, LOCALEDIR);
 #endif
 	lib_initialized = TRUE;
 }
@@ -266,6 +266,9 @@ void opencc_perror(const char * spec)
 		break;
 	case OPENCC_ERROR_CONVERTER:
 		converter_perror(_("Converter error"));
+		break;
+	case OPENCC_ERROR_ENCODIND:
+		perr(_("Encoding error"));
 		break;
 	default:
 		perr(_("Unknown"));
