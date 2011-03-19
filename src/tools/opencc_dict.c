@@ -1,7 +1,7 @@
 /*
 * Open Chinese Convert
 *
-* Copyright 2010 BYVoid <byvoid1@gmail.com>
+* Copyright 2010 BYVoid <byvoid.kcp@gmail.com>
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -22,6 +22,7 @@
 #include "../dictionary/datrie.h"
 #include "../dictionary/text.h"
 #include <unistd.h>
+#include <locale.h>
 
 #define DATRIE_SIZE 1000000
 #define DATRIE_WORD_MAX_COUNT 500000
@@ -392,9 +393,9 @@ int main(int argc, char ** argv)
 	static char input_file[BUFFER_SIZE], output_file[BUFFER_SIZE];
 	int input_file_specified = FALSE, output_file_specified = FALSE;
 
-#ifdef HAVE_GETTEXT
+#ifdef ENABLE_GETTEXT
 	setlocale(LC_ALL, "");
-	bindtextdomain(PACKAGE, LOCALEDIR);
+	bindtextdomain(PACKAGE_NAME, LOCALEDIR);
 #endif
 
 	while((oc = getopt(argc, argv, "vh-:i:o:")) != -1)
