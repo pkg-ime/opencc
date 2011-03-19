@@ -6,8 +6,8 @@ Build-Depends: debhelper (>= 7.0.50~), autotools-dev, cmake
 Standards-Version: 3.9.1
 Section: libs
 Homepage: http://code.google.com/p/opencc
-Vcs-Git: git://git.com
-Vcs-Browser: http://git.com
+Vcs-Git: git://git.debian.org/git/pkg-ime/opencc.git
+Vcs-Browser: http://git.debian.org/?p=pkg-ime/opencc.git
 
 Package: libopencc-dev
 Section: libdevel
