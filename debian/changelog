@@ -1,3 +1,13 @@
+opencc (0.2.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Move usr/share/locale to package opencc
+  * Add cmake to Build-Depends
+  * Change Homepage to http://code.google.com/p/opencc
+  * Drop  Vcs-Bzr and Vcs-Browser
+
+ -- Asias He <asias.hejun@gmail.com>  Thu, 17 Mar 2011 21:36:41 +0800
+
 opencc (0.1.2-1) unstable; urgency=low
 
   * New upstream release.

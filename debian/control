@@ -2,12 +2,12 @@ Source: opencc
 Priority: optional
 Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org> 
 Uploaders: LI Daobing <lidaobing@debian.org>, Asias He <asias.hejun@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~), autotools-dev
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev, cmake
 Standards-Version: 3.9.1
 Section: libs
-Homepage: http://code.google.com/p/open-chinese-convert
-Vcs-Bzr: lp:~pkg-ime/opencc/debian-opencc
-Vcs-Browser: https://code.launchpad.net/~pkg-ime/opencc/debian-opencc
+Homepage: http://code.google.com/p/opencc
+Vcs-Git: git://git.com
+Vcs-Browser: http://git.com
 
 Package: libopencc-dev
 Section: libdevel
