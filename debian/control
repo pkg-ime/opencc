@@ -2,8 +2,8 @@ Source: opencc
 Priority: optional
 Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org> 
 Uploaders: LI Daobing <lidaobing@debian.org>, Asias He <asias.hejun@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~), autotools-dev, cmake
-Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev, cmake, quilt
+Standards-Version: 3.9.2
 Section: libs
 Homepage: http://code.google.com/p/opencc
 Vcs-Git: git://git.debian.org/git/pkg-ime/opencc.git
