@@ -2,6 +2,7 @@ opencc (0.2.0-2) unstable; urgency=low
 
   * Fix "Please fix FTBFS on mips, ppc, s390 and sparc" (Closes: #624562)
   * debian/control: bump standards version to 3.9.2.
+  * Set DM-Upload-Allowed to yes
 
  -- Asias He <asias.hejun@gmail.com>  Mon, 16 May 2011 20:46:03 +0800
 
