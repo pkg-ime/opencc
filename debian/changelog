@@ -3,6 +3,7 @@ opencc (0.3.0-1) unstable; urgency=low
   * New upstream release
   * Remove autotools-dev and quilt from Build-Depends
   * Support `nostrip' DEB_BUILD_OPTIONS
+  * Enable hardening flags.
   * debian/patches/fix-big-endian-build.diff: merged upstream
   * debian/patches/fix-new-test-cases.patch: New patch.
 
