@@ -1,6 +1,13 @@
 #!/usr/bin/make -f
+
+ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
+  BUILD_TYPE=Release
+else
+  BUILD_TYPE=Debug
+endif
+
 %:
 	dh  $@
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DENABLE_GETTEXT:BOOL=ON
+	dh_auto_configure -- -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=$(BUILD_TYPE) -DENABLE_GETTEXT:BOOL=ON
