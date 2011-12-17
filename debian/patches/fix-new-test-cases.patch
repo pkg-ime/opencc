@@ -1,0 +1,29 @@
+Description: Fix new test cases
+ Copy nedded dict files to ${PROJECT_BINARY_DIR}/data for tests.
+Author: Kan-Ru Chen <koster@debian.org>
+
+--- a/data/CMakeLists.txt
++++ b/data/CMakeLists.txt
+@@ -92,4 +92,10 @@
+ 		${CHINA_DICT_FILES}
+ 	DESTINATION
+ 		${DIR_SHARE_OPENCC}
+-)
+\ No newline at end of file
++)
++
++if (BUILD_TESTING)
++	foreach (DICT ${TAIWAN_DICT_FILES} ${CHINA_DICT_FILES})
++		configure_file(${DICT} ${PROJECT_BINARY_DIR}/data COPYONLY)
++	endforeach (DICT)
++endif (BUILD_TESTING)
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -20,6 +20,7 @@
+ cmake_minimum_required(VERSION 2.8)
+ set (PACKAGE_NAME opencc)
+ project (${PACKAGE_NAME} C)
++include (CTest)
+ enable_testing()
+ 
+ ######## Package information
