@@ -33,7 +33,7 @@ foreach(DICT_PREFIX simp_to_trad trad_to_simp)
 			FILES
 				${CMAKE_BINARY_DIR}/data/${DICT}.ocd
 			DESTINATION
-				${DIR_SHARE}/opencc
+				${DIR_SHARE_OPENCC}
 		)
 
 		set_directory_properties(
@@ -50,11 +50,46 @@ set(CONFIG_FILES
 	config/zht2zhs.ini
 	config/mix2zht.ini
 	config/mix2zhs.ini
+	config/zhs2zhtw_p.ini
+	config/zhs2zhtw_v.ini
+	config/zhs2zhtw_vp.ini
+	config/zht2zhtw_p.ini
+	config/zht2zhtw_v.ini
+	config/zht2zhtw_vp.ini
+	config/zhtw2zht.ini
+	config/zhtw2zhs.ini
+	config/zhtw2zhcn_s.ini
+	config/zhtw2zhcn_t.ini
 )
 
 install(
 	FILES
 		${CONFIG_FILES}
 	DESTINATION
-		${DIR_SHARE}/opencc
+		${DIR_SHARE_OPENCC}
+)
+
+set(TAIWAN_DICT_FILES
+	tw/to_tw_variants.txt
+	tw/to_tw_phrases.txt
+	tw/from_tw_variants.txt
+	tw/from_tw_phrases.txt
+)
+
+install(
+	FILES
+		${TAIWAN_DICT_FILES}
+	DESTINATION
+		${DIR_SHARE_OPENCC}
+)
+
+set(CHINA_DICT_FILES
+	cn/to_cn_phrases.txt
+)
+
+install(
+	FILES
+		${CHINA_DICT_FILES}
+	DESTINATION
+		${DIR_SHARE_OPENCC}
 )
