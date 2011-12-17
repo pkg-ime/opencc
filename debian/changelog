@@ -1,3 +1,10 @@
+opencc (0.3.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove autotools-dev and quilt from Build-Depends
+
+ -- Kan-Ru Chen <koster@debian.org>  Sat, 17 Dec 2011 16:41:49 +0800
+
 opencc (0.2.0-2) unstable; urgency=low
 
   * Fix "Please fix FTBFS on mips, ppc, s390 and sparc" (Closes: #624562)
